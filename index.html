@@ -1,0 +1,2792 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexique - Abréviations</title>
+    <style type="text/css">
+      /* Définissez vos styles de thème ici */
+      .dark-theme {
+        --background-color: #111122;
+        --text-color: #dfeaf6;
+        --table-background: #222233;
+        --table-hover: #333344;
+        --link-color: salmon;
+        --ari-blab-color: #f1e2d7;
+        --search-input-shadow: rgba(255, 255, 255, 0.4);
+        --result-color: #ffa600;
+        --search-btn-color: #333366;
+        --search-btn-hover: #555599;
+      }
+
+      .light-theme {
+        --background-color: #f5f5f5;
+        --text-color: #333333;
+        --table-background: #ffffff;
+        --table-hover: #f0f0f0;
+        --link-color: #007acc;
+        --ari-blab-color: #555555;
+        --search-input-shadow: rgba(0, 0, 0, 0.1);
+        --result-color: #1e90ff;
+        --search-btn-color: #007acc;
+        --search-btn-hover: #0056b3;
+      }
+
+
+      :root {
+        /* Définissez les variables de thème par défaut ici */
+        --background-color: var(--background-color-dark);
+        --text-color: var(--text-color-dark);
+        --table-background: var(--table-background-dark);
+        --table-hover: var(--table-hover-dark);
+        --link-color: var(--link-color-dark);
+        --ari-blab-color: var(--ari-blab-color-dark);
+        --search-input-shadow: var(--search-input-shadow-dark);
+        --result-color: var(--result-color-dark);
+        --search-btn-color: var(--search-btn-color-dark);
+        --search-btn-hover: var(--search-btn-hover-dark);
+      }
+
+      * {
+  transition: 0.5s ease;
+}
+
+.no-transition * {
+  transition: none !important;
+}
+
+
+      .highlight {
+        background-color: var(--result-color);
+        color: var(--background-color);
+        font-weight: bold;
+      }
+
+      body {
+        background-color: var(--background-color);
+        font-family: "Roboto", sans-serif;
+        color: var(--text-color);
+      }
+
+      h1 {
+        font-size: 40px;
+        margin: 30px;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      a {
+        color: var(--link-color);
+      }
+
+      .ari_blab {
+        font-size: 12.5pt;
+        font-weight: bold;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: default !important;
+        color: var(--ari-blab-color);
+      }
+
+      .ari_blab:hover {
+        background-color: var(--table-hover);
+      }
+
+      .ari_blab>td {
+        text-shadow: none !important;
+        text-decoration: none !important;
+      }
+
+      tr {
+        background-color: var(--table-background);
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+      }
+
+      tr:hover {
+        background-color: var(--table-hover);
+      }
+
+      td {
+        padding: 15px;
+        border-bottom: 1px solid #444444;
+      }
+
+      td:first-child {
+        font-weight: bold;
+      }
+
+      td:last-child {
+        text-align: left;
+      }
+
+      .search-bar {
+        display: flex;
+        width: 300px;
+        margin: 20px 50px 50px 50px;
+        justify-content: center;
+        flex-direction: row;
+      }
+
+      .search-input {
+        padding: 5px;
+        border: 1px solid #444444;
+        border-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      .no-result {
+        color: var(--result-color);
+        font-style: italic;
+        display: none;
+      }
+
+      .search-btn {
+        padding: 10px;
+        background-color: var(--search-btn-color);
+        border: none;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      /* Style pour le bouton de recherche lorsqu'il est désactivé */
+      .search-btn:disabled {
+        background-color: #555555;
+        color: #888888;
+        cursor: not-allowed;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      .ari_blan {
+        animation: fadeIn 0.8s ease;
+      }
+
+      td:hover {
+        text-decoration: underline;
+      }
+
+      .search-input:hover {
+        box-shadow: 0 0 15px var(--search-input-shadow);
+      }
+
+      .search-btn:hover {
+        background-color: var(--search-btn-hover);
+        color: #ffffff;
+      }
+
+      .switchThemes {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 35px;
+        height: 35px;
+        background-color: var(--table-background);
+        border: none;
+        border-radius: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        border: var(--text-color) solid 1px;
+        color: var(--text-color);
+        -webkit-text-stroke: var(--text-color) 0.5px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .switchThemes:hover {
+        background-color: var(--table-hover);
+      }
+    </style>
+    <meta name="Keywords" content="Eve" online="" abreviations="" abr&eacute;viations="" abreviation=""
+      abr&eacute;viation="" />
+  </head>
+
+  <body class="dark-theme">
+
+    <!-- Merci à Tessen pour le contenu original et Astérix pour son accueil sur Eve Online et pour ses conseils -->
+
+    <button type="button" class="switchThemes" onclick="toggleTheme()">☼</button>
+
+    <div align="center">
+      <h1>Lexique Eve Online</h1>
+      <div class="search-bar">
+        <label for="search" style="display: none">Rechercher :</label>
+        <input type="text" id="search" class="search-input" placeholder="Entrez un mot-clé..." />
+        <button type="button" class="search-btn" onclick="searchTable()">Rechercher</button>
+      </div>
+
+      <table class="ari_blan">
+        <tbody>
+          <tr class="ari_blab">
+            <td>Abréviation</td>
+            <td>Equivalence</td>
+            <td>Signification</td>
+            <td>Origine</td>
+            <td>Traduction/Note</td>
+          </tr>
+
+          <tr>
+            <td><b>+1</b></td>
+            <td></td>
+            <td></td>
+            <td>Forums</td>
+            <td>
+              Je souscris à ces propos, j'approuve ce qui vient d'être dit.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>AB</b></td>
+            <td></td>
+            <td>AfterBurner</td>
+            <td>EvE</td>
+            <td>Module de vitesse.</td>
+          </tr>
+
+          <tr>
+            <td><b>AF</b></td>
+            <td>AS</td>
+            <td>Assault Frigate</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>AFAIK</b></td>
+            <td></td>
+            <td>As Far As I Know</td>
+            <td>Anglais</td>
+            <td>D'après ce que je sais.</td>
+          </tr>
+
+          <tr>
+            <td><b>AFK</b></td>
+            <td></td>
+            <td>Away From Keyboard</td>
+            <td>Anglais</td>
+            <td>Pour signaler son absence.</td>
+          </tr>
+
+          <tr>
+            <td><b>AKA</b></td>
+            <td></td>
+            <td>Also Known As</td>
+            <td>Anglais</td>
+            <td>Aussi connu sous tel ou tel nom ou pseudonyme.</td>
+          </tr>
+
+          <tr>
+            <td><b>Alpha</b></td>
+            <td></td>
+            <td>Alpha Strike</td>
+            <td>EvE</td>
+            <td>
+              Première salve de tir toutes tourelles active (<a
+                href="http://forums.jeuxonline.info/showpost.php?p=15507035&amp;postcount=16">détails</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Alt</b></td>
+            <td></td>
+            <td>Alternate Character</td>
+            <td>MMOGs</td>
+            <td>Perso secondaire d'un joueur.</td>
+          </tr>
+
+          <tr>
+            <td><b>Ammo</b></td>
+            <td></td>
+            <td>Ammunitions</td>
+            <td>Militaire</td>
+            <td>Munitions.</td>
+          </tr>
+
+          <tr>
+            <td><b>AP</b></td>
+            <td></td>
+            <td>Autopilot</td>
+            <td>EvE</td>
+            <td>Pilotage automatique.</td>
+          </tr>
+
+          <tr>
+            <td><b>Apoc</b></td>
+            <td></td>
+            <td>Apocalypse</td>
+            <td>EvE</td>
+            <td>BS Amarr.</td>
+          </tr>
+
+          <tr>
+            <td><b>AS</b></td>
+            <td></td>
+            <td>Assault Ship</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>ASAP</b></td>
+            <td></td>
+            <td>As Soon As Possible</td>
+            <td>Anglais</td>
+            <td>Dès que possible.</td>
+          </tr>
+
+          <tr>
+            <td><b>ATM</b></td>
+            <td></td>
+            <td>At The Moment</td>
+            <td>Anglais</td>
+            <td>A l'heure actuelle.</td>
+          </tr>
+
+          <tr>
+            <td><b>AURORA</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Auxiliary Union for Relay Observation Recording &amp; Analysis.<br />
+              Section en charge de <i>events</i> chez CCP.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>BB</b></td>
+            <td></td>
+            <td>BlackBird</td>
+            <td>EvE</td>
+            <td>Croiseur Caldari.</td>
+          </tr>
+
+          <tr>
+            <td><b>bbq</b></td>
+            <td></td>
+            <td>Barbecue</td>
+            <td>Anglais</td>
+            <td>
+              Se trouve parfois dans des expressions faisant allusions à des
+              situations particulièrement délicates ou dangereuses. C'est chaud
+              quoi.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>BC</b></td>
+            <td></td>
+            <td>Battlecruiser</td>
+            <td>EvE</td>
+            <td>Classe de vaisseaux.</td>
+          </tr>
+
+          <tr>
+            <td><b>BCU</b></td>
+            <td></td>
+            <td>Ballistic Control Unit</td>
+            <td>EvE</td>
+            <td>
+              Module qui a pour effet d'augmenter l'efficacité des lances
+              missiles.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Belt</b></td>
+            <td></td>
+            <td>Asteroïd belt</td>
+            <td>EvE</td>
+            <td>Ceinture d’astéroïdes, principaux lieux de minage.</td>
+          </tr>
+
+          <tr>
+            <td><b>Besto</b></td>
+            <td></td>
+            <td>Bestower</td>
+            <td>EvE</td>
+            <td>Industriel Amarr.</td>
+          </tr>
+
+          <tr>
+            <td><b>Blood</b></td>
+            <td>BR</td>
+            <td>Blood Raiders Pirates</td>
+            <td>EvE</td>
+            <td>Faction NPC Pirate.</td>
+          </tr>
+
+          <tr>
+            <td><b>Blops</b></td>
+            <td>BO</td>
+            <td>Black Ops</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>BM</b></td>
+            <td></td>
+            <td>Bookmark</td>
+            <td>EvE</td>
+            <td>Coordonnées d'un point précis dans un système.</td>
+          </tr>
+
+          <tr>
+            <td><b>BO</b></td>
+            <td>Blops</td>
+            <td>Black Ops</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>BO</b></td>
+            <td></td>
+            <td>Buy Order</td>
+            <td>EvE</td>
+            <td>Ordre d'achat (sur le market).</td>
+          </tr>
+
+          <tr>
+            <td><b>Bob</b></td>
+            <td>RKZ</td>
+            <td>Band Of Brothers</td>
+            <td>EvE</td>
+            <td>Ancien nom de l'alliance de joueurs KenZoku.</td>
+          </tr>
+
+          <tr>
+            <td><b>BP</b></td>
+            <td>BPC BPO</td>
+            <td>Blueprint (Copy ou Original)</td>
+            <td>EvE</td>
+            <td>
+              Plans de construction (terme générique, copie à usage limité ou
+              Original sans limitations).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>BRB</b></td>
+            <td>BBL BBS</td>
+            <td>
+              Be Right Back<br />
+              (Be Back Later/Soon)
+            </td>
+            <td>Anglais</td>
+            <td>Je reviens tout de suite (plus tard, bientôt).</td>
+          </tr>
+
+          <tr>
+            <td><b>BS</b></td>
+            <td></td>
+            <td>Battleship</td>
+            <td>EvE</td>
+            <td>Classe de vaisseaux.</td>
+          </tr>
+
+          <tr>
+            <td><b>BTW</b></td>
+            <td></td>
+            <td>By The Way</td>
+            <td>Anglais</td>
+            <td>
+              Au fait (en début de phrase) ou A propos de (en fin de phrase).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>BYOB</b></td>
+            <td></td>
+            <td>Bring Your Own Blueprint</td>
+            <td>EvE</td>
+            <td>
+              Arrangement commercial, le client fournis BP et minéraux au
+              producteur.
+            </td>
+          </tr>
+
+          <tr>
+            <td><span style="font-weight: bold">CAC</span></td>
+            <td></td>
+            <td></td>
+            <td>Militaire</td>
+            <td>Corps à Corps.</td>
+          </tr>
+          <tr>
+            <td><b>BYOM</b></td>
+            <td></td>
+            <td>Bring Your Own Mineral</td>
+            <td>EvE</td>
+            <td>
+              Arrangement commercial, le client fournis les minéraux au
+              producteur (mais pas le BP).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Can</b></td>
+            <td>Jet</td>
+            <td>Cannette (Jettisson)</td>
+            <td>EvE</td>
+            <td>
+              Cargo d'environ 27.500 m3 créé lors de l'éjection (Jettisson) de
+              matériel dans l'espace.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Capa</b></td>
+            <td>Cap</td>
+            <td>Capacitor</td>
+            <td>EvE</td>
+            <td>Niveau d'énergie disponible d'un vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>Carebear</b></td>
+            <td></td>
+            <td>Bisounours</td>
+            <td>Anglais</td>
+            <td>
+              Désigne un joueur qui ne prends pas de risque dans son style de
+              jeu.<br />
+              Utilisé de manière péjorative par certains PvPeurs pour désigner
+              les joueurs en empire.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>CC</b></td>
+            <td></td>
+            <td>Chat Channel</td>
+            <td>EvE</td>
+            <td>Chan de discussion.</td>
+          </tr>
+
+          <tr>
+            <td><b>CCC</b></td>
+            <td></td>
+            <td>Capacitor Control Circuit</td>
+            <td>EvE</td>
+            <td><i>Rig</i> qui augmente le capacitor.</td>
+          </tr>
+
+          <tr>
+            <td><b>CCP</b></td>
+            <td></td>
+            <td>Crowd Control Productions</td>
+            <td>Anglais</td>
+            <td>Société Islandaise éditeur de Eve Online.</td>
+          </tr>
+
+          <tr>
+            <td><b>CDT</b></td>
+            <td></td>
+            <td></td>
+            <td>Militaire</td>
+            <td>Cadence De Tir.</td>
+          </tr>
+
+          <tr>
+            <td><b>ceptor</b></td>
+            <td>Inty</td>
+            <td>Interceptor</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>Claim</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Zone (système, constellation ou région) revendiquées par une
+              corporation ou une alliance.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Cloaker</b></td>
+            <td></td>
+            <td>To cloak / cloaking device</td>
+            <td>Franglais</td>
+            <td>
+              Module ou utilisation d'un module qui permet de dissimuler
+              complètement son vaisseau au prix d'une réduction drastique de la
+              vitesse maximale, de la puissance de ses senseurs et
+              l'impossibilité d'utiliser le moindre module.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>CNR</b></td>
+            <td>RNI</td>
+            <td>Caldari Navy Raven.</td>
+            <td>EvE</td>
+            <td>
+              BS de faction Caldari (Abréviation préférée à RNI malgré le fait
+              que ce soit son véritable nom).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Convo</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Inviter un ou des joueurs à une conversation sur un channel
+              privée.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Copro</b></td>
+            <td></td>
+            <td>Co-Processor Unit</td>
+            <td>EvE</td>
+            <td>Type de module qui boost le CPU.</td>
+          </tr>
+
+          <tr>
+            <td><b>coz</b></td>
+            <td></td>
+            <td>Because</td>
+            <td>Anglais</td>
+            <td>Parce que.</td>
+          </tr>
+
+          <tr>
+            <td><b>CPR</b></td>
+            <td></td>
+            <td>Capacitor Power Relay</td>
+            <td>EvE</td>
+            <td>Module d'énergie.</td>
+          </tr>
+
+          <tr>
+            <td><b>CRC</b></td>
+            <td></td>
+            <td>Communications Relay Comission</td>
+            <td>EvE</td>
+            <td>Section en charge de la modération des forums chez CCP.</td>
+          </tr>
+
+          <tr>
+            <td><b>CS</b></td>
+            <td></td>
+            <td>Command Ship</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><span style="font-weight: bold">CSAA</span></td>
+            <td></td>
+            <td>Capital Ship Assembly Array</td>
+            <td>EvE</td>
+            <td>
+              Structure en POS qui permet la construction de vaisseaux de classe
+              Capital.
+            </td>
+          </tr>
+          <tr>
+            <td><b>CSM</b></td>
+            <td></td>
+            <td>Council for Stellar Management</td>
+            <td>EvE</td>
+            <td>Chat IRC lieu de rencontre entre les Devs et les joueurs.</td>
+          </tr>
+
+          <tr>
+            <td><span style="font-weight: bold">CTA</span></td>
+            <td></td>
+            <td>Call To Arm</td>
+            <td>EvE</td>
+            <td>
+              Appel aux armes. Quand les pilotes d'une alliance sont requis pour
+              une opération militaire.
+            </td>
+          </tr>
+          <tr>
+            <td><b>ctrl+q</b></td>
+            <td></td>
+            <td>Control Quit</td>
+            <td>EvE</td>
+            <td>
+              Raccourcis clavier pour quitter le jeu.<br />
+              Blague de mauvais goût faite par certains quand un débutant pose
+              une question du genre "Comment fait on pour… ?".
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>cu</b></td>
+            <td>CYA</td>
+            <td>See You</td>
+            <td>Anglais</td>
+            <td>A plus tard.</td>
+          </tr>
+
+          <tr>
+            <td><b>cya</b></td>
+            <td>CU</td>
+            <td>See Ya</td>
+            <td>Anglais</td>
+            <td>
+              A plus tard mais inclus une notion de faire attention à soi.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Cyno</b></td>
+            <td></td>
+            <td>Cynosural Field</td>
+            <td>EvE</td>
+            <td>
+              Balise qui permet aux vaisseaux de classe Capital de changer de
+              système.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>DB</b></td>
+            <td></td>
+            <td>Data Base</td>
+            <td>Informatique</td>
+            <td>
+              Base de Donnée. Pour Eve, là où sont stockées toutes les données
+              concernant les joueurs et l'univers.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>DD</b></td>
+            <td></td>
+            <td>Doomsday Weapon</td>
+            <td>EvE</td>
+            <td>Arme principale des vaisseaux de classe Titan.</td>
+          </tr>
+
+          <tr>
+            <td><b>Déco</b></td>
+            <td>Délog</td>
+            <td></td>
+            <td>Franglais</td>
+            <td>Se déconnecter.</td>
+          </tr>
+
+          <tr>
+            <td><b>Dédock</b></td>
+            <td>Undock</td>
+            <td>Dock out</td>
+            <td>Franglais</td>
+            <td>
+              Utilisé à partir du sens maritime du terme <i>undock</i>, quand un
+              vaisseau sort de station.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>DLMQT</b></td>
+            <td></td>
+            <td>De La Mort Qui Tue</td>
+            <td>Français</td>
+            <td>Est-ce vraiment nécessaire d'expliquer ?</td>
+          </tr>
+
+          <tr>
+            <td><b>Délog</b></td>
+            <td>Déco</td>
+            <td></td>
+            <td>Franglais</td>
+            <td>Se déconnecter.</td>
+          </tr>
+
+          <tr>
+            <td><b>Dev</b></td>
+            <td></td>
+            <td>Developper</td>
+            <td>EvE</td>
+            <td>
+              Communément utilisé pour désigner l'équipe des développeurs d'Eve
+              Online.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>DG</b></td>
+            <td>Dread</td>
+            <td>Dread Gurista</td>
+            <td>EvE</td>
+            <td>Type de modules ou vaisseaux de la faction pirate Gurista.</td>
+          </tr>
+
+          <tr>
+            <td><b>dictor</b></td>
+            <td></td>
+            <td>Interdictor</td>
+            <td>EvE</td>
+            <td>Classe de vaisseaux.</td>
+          </tr>
+
+          <tr>
+            <td><b>Docker</b></td>
+            <td></td>
+            <td>Dock in</td>
+            <td>Franglais</td>
+            <td>
+              Utilisé à partir du sens maritime du terme <i>dock</i>, quand un
+              vaisseau entre en station.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Dom</b></td>
+            <td>Domi</td>
+            <td>Dominix</td>
+            <td>EvE</td>
+            <td>BS Gallente.</td>
+          </tr>
+
+          <tr>
+            <td><b>Down</b></td>
+            <td>DT</td>
+            <td>Down Serveur</td>
+            <td>EvE</td>
+            <td>
+              Période de maintenance quotidienne du serveur<br />
+              Il est alors impossible de se connecter entre 11 et 12h UTC.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>DPS</b></td>
+            <td></td>
+            <td>Dammage Per Seccond</td>
+            <td>MMOGs</td>
+            <td>Dommages Par Seconde.</td>
+          </tr>
+
+          <tr>
+            <td><b>Dread</b></td>
+            <td></td>
+            <td>Dreadnought</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>DT</b></td>
+            <td>Down</td>
+            <td>Down Time</td>
+            <td>EvE</td>
+            <td>Arrêt quotidien du serveur (entre 11 et 12h UTC).</td>
+          </tr>
+
+          <tr>
+            <td><b>EAF</b></td>
+            <td>EAS</td>
+            <td>Electronic Attack Ship</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>EANM</b></td>
+            <td></td>
+            <td>Energized Adaptive Nano Membrane</td>
+            <td>EvE</td>
+            <td>Module pour le <i>tank armor</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>EAS</b></td>
+            <td></td>
+            <td>Electronic Attack Ship</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>ECAID</b></td>
+            <td></td>
+            <td>Equipment Certification and Anomaly Investigations Division</td>
+            <td>EvE</td>
+            <td>Section en charge du débugage chez CCP.</td>
+          </tr>
+
+          <tr>
+            <td><b>ECCM</b></td>
+            <td></td>
+            <td>Electronic Counter Counter Measures</td>
+            <td>EvE</td>
+            <td>Anti ECM.</td>
+          </tr>
+
+          <tr>
+            <td><b>ECM</b></td>
+            <td></td>
+            <td>Electronic Counter Measures</td>
+            <td>Militaire</td>
+            <td>
+              Brouillage électronique.<br />
+              Dans Eve, fait référence aux modules qui renforcent le
+              <i>sensors strength</i> d'un vaisseau.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Electro</b></td>
+            <td>EAS</td>
+            <td>Electronic Attack Ship</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>ETA</b></td>
+            <td></td>
+            <td>Estimated Time of Arrival</td>
+            <td>Militaire</td>
+            <td>Délais estimé avant arrivée à destination.</td>
+          </tr>
+
+          <tr>
+            <td><b>Ewar</b></td>
+            <td>EW</td>
+            <td>Electronic Warfare</td>
+            <td>EvE</td>
+            <td>
+              Guerre électronique.<br />
+              Dans Eve, fait référence aux
+              <i>ECM, Dampeners, Tracking Disruptors</i> et
+              <i>Targets Painters</i>. (voir aussi
+              <a href="http://izlin.free.fr/eve/ew.htm">ici</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td><span style="font-weight: bold">FA</span></td>
+            <td></td>
+            <td>Full Agro</td>
+            <td>EvE</td>
+            <td>Se dit quand un pilote concentre tous les tirs adverse.</td>
+          </tr>
+          <tr>
+            <td><b>FAQ</b></td>
+            <td></td>
+            <td>Frequently Asked Questions</td>
+            <td>Anglais</td>
+            <td>
+              Foire Aux Question, littéralement : Questions Fréquemment Posées.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>FC</b></td>
+            <td></td>
+            <td>Fleet Commander</td>
+            <td>EvE</td>
+            <td>
+              Commandant de la flotte, celui qui donne les ordres, qu'on écoute
+              toujours.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Fiter</b></td>
+            <td></td>
+            <td>Fit</td>
+            <td>Franglais</td>
+            <td>
+              Francisation du verbe <i>to fit</i> qui désigne l'action d'équiper
+              son vaisseau de modules et d'armement (voir aussi
+              <a href="http://forums.jeuxonline.info/showpost.php?p=10406543&amp;postcount=26">ici</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Freezer</b></td>
+            <td></td>
+            <td>Freeze</td>
+            <td>Franglais</td>
+            <td>
+              Francisation du mot <i>freeze</i> qui désigne une paralysie de
+              l'image affichée à l'écran.<br />
+              Souvent résultant d'un lag ou d'un plantage machine.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Frig</b></td>
+            <td></td>
+            <td>Frigate</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau</td>
+          </tr>
+
+          <tr>
+            <td><b>FTL</b></td>
+            <td></td>
+            <td>For The Lose</td>
+            <td>Anglais</td>
+            <td>
+              Désigne une opération ou un acte voué à l'échec. Utilisé par
+              opposition à FTW.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>FTW</b></td>
+            <td></td>
+            <td>For The Win</td>
+            <td>Anglais</td>
+            <td>
+              Désigne en général une action, une entité, un module ou un
+              vaisseau fait pour gagner de par sa puissance ou son efficacité.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>FYI</b></td>
+            <td></td>
+            <td>For Your Information</td>
+            <td>Anglais</td>
+            <td>Pour votre information.</td>
+          </tr>
+
+          <tr>
+            <td><b>Gank</b></td>
+            <td></td>
+            <td></td>
+            <td>MMOGs</td>
+            <td>
+              Joueur ou groupe de joueurs optimisés pour détruire leur cible en
+              un minimum de temps.<br />
+              L'expression se faire gank, signifie se faire tuer/détruire sans
+              avoir le temps de se défendre, de tenter de fuir et/ou sans avoir
+              la moindre chance de s'en sortir.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>GBC</b></td>
+            <td></td>
+            <td>Great BoB Communauty</td>
+            <td>EvE</td>
+            <td>
+              Meta alliance regroupant plusieurs alliances de joueurs dont la
+              principale est Bob.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Geek</b></td>
+            <td></td>
+            <td></td>
+            <td>Anglais</td>
+            <td>
+              Se dit d'une personne accroc d'un domaine ou d'un jeu en
+              particulier.<br />
+              Catalogué souvent comme associal.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>GG</b></td>
+            <td>GJ</td>
+            <td>
+              Good Game ou<br />
+              Good Gamer
+            </td>
+            <td>MMOGs</td>
+            <td>
+              Félicitation à un adversaire ou à des alliés pour désigner un
+              travail bien fait ou une action qui a procuré du plaisir.<br />
+              Peut également désigner un bon joueur.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>GIYF</b></td>
+            <td></td>
+            <td>Google Is Your Friend</td>
+            <td>Anglais</td>
+            <td>
+              Google est ton ami, en gros c'est une invitation par une personne
+              à peine agacée à faire une recherche sur un moteur de recherche.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>GJ</b></td>
+            <td>GG</td>
+            <td>Good Job</td>
+            <td>MMOGs</td>
+            <td>
+              Félicitation à un adversaire ou à des alliés pour désigner un
+              travail bien fait ou une action qui a procuré du plaisir.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>GM</b></td>
+            <td></td>
+            <td>Game Master</td>
+            <td>Anglais</td>
+            <td>
+              Maître de Jeu. Dans les cas de Eve, désigne les plus souvent les
+              développeurs.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>GMT</b></td>
+            <td>UTC</td>
+            <td>Greenwich Mean Time</td>
+            <td>Anglais</td>
+            <td>voir UTC.</td>
+          </tr>
+
+          <tr>
+            <td><b>Goon</b></td>
+            <td></td>
+            <td>Goon Swarm / Goon Fleet</td>
+            <td>EvE</td>
+            <td>Alliance de joueurs / Corporation fondatrice de Goon Swarm.</td>
+          </tr>
+
+          <tr>
+            <td><b>Grats</b></td>
+            <td></td>
+            <td>Congratulations</td>
+            <td>MMOGs</td>
+            <td>Bravo, félicitation.</td>
+          </tr>
+
+          <tr>
+            <td><b>GTG</b></td>
+            <td></td>
+            <td>Got To Go</td>
+            <td>MMOGs</td>
+            <td>Je dois partir / me déconnecter.</td>
+          </tr>
+
+          <tr>
+            <td><b>Gugu</b></td>
+            <td></td>
+            <td>Gurista Pirates</td>
+            <td>EvE</td>
+            <td>Faction NPC Pirate.</td>
+          </tr>
+
+          <tr>
+            <td><b>Gyro</b></td>
+            <td></td>
+            <td>Gyrostabilizer</td>
+            <td>EvE</td>
+            <td>
+              Module qui a pour effet d'augmenter l'efficacité des armes à
+              projectiles.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>HAC</b></td>
+            <td>HAS</td>
+            <td>Heavy Assault Cruiser</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>HAS</b></td>
+            <td></td>
+            <td>Heavy Assault Ship</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>Hauler</b></td>
+            <td></td>
+            <td></td>
+            <td>Anglais</td>
+            <td>
+              Littéralement transporteur routier.<br />
+              Dans Eve, désigne les pilotes de vaisseaux de classe
+              <i>Industrial</i> ou <i>Freighter</i> en charge du transport de
+              marchandises.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Hauling</b></td>
+            <td></td>
+            <td></td>
+            <td>Anglais</td>
+            <td>
+              Littéralement transport routier.<br />
+              Dans Eve, désigne le transport de marchandises.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Heat</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Un module ainsi mis en surchauffe est plus efficace mais à des
+              chances cumulative de tomber en panne avec le temps. Il pourra
+              alors être réparé avec des nanites.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Hdictor</b></td>
+            <td>Hictor</td>
+            <td>Heavy Interdictor</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>Hictor</b></td>
+            <td>Hdictor</td>
+            <td>Heavy Interdictor</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>HRP</b></td>
+            <td>OOC</td>
+            <td>Hors Role Play</td>
+            <td>Franglais</td>
+            <td>
+              L'utilisateur signale qu'il parle en son nom propre et non celui
+              de son personnage/avatar.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Hyb</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>Armes de type Hybride.</td>
+          </tr>
+
+          <tr>
+            <td><b>IG</b></td>
+            <td></td>
+            <td>In Game</td>
+            <td>MMOGs</td>
+            <td>Dans le jeu.</td>
+          </tr>
+
+          <tr>
+            <td><b>IGB</b></td>
+            <td></td>
+            <td>In Game Browser</td>
+            <td>EvE</td>
+            <td>Navigateur internet en ligne intégré au jeu.</td>
+          </tr>
+
+          <tr>
+            <td><b>IMO / IMHO</b></td>
+            <td></td>
+            <td>In My (Humble) Opinion</td>
+            <td>MMOGs</td>
+            <td>A mon (humble) avis.</td>
+          </tr>
+
+          <tr>
+            <td><b>Indus</b></td>
+            <td>Indy</td>
+            <td>Industrial</td>
+            <td>EvE</td>
+            <td>
+              Classe de vaisseau. Désigne également les vaisseaux de transport
+              d'une manière plus globale, ce qui inclus les classes
+              <i>Blockade Runner</i> et <i>Transport Ship</i>.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Indy</b></td>
+            <td>Indus</td>
+            <td>Industrial</td>
+            <td>EvE</td>
+            <td>
+              Classe de vaisseau. Désigne également les vaisseaux de transport
+              d'un manière plus globale, ce qui inclus les classes
+              <i>Blockade Runner</i> et <i>Transport Ship</i>.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Inertia stab</b></td>
+            <td>Inertia</td>
+            <td>Inertia Stabilizer</td>
+            <td>EvE</td>
+            <td>Module qui améliore l'agilité d'un vaisseau</td>
+          </tr>
+
+          <tr>
+            <td><b>Inty</b></td>
+            <td>ceptor</td>
+            <td>Interceptor</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>IRL</b></td>
+            <td></td>
+            <td>In Real Life</td>
+            <td>MMOGs</td>
+            <td>Dans le monde réel.</td>
+          </tr>
+
+          <tr>
+            <td><b>ISD</b></td>
+            <td></td>
+            <td>Interstellar Services Department</td>
+            <td>EvE</td>
+            <td>
+              Structure regroupant les différentes structures de bénévoles
+              travaillant avec CCP.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>ISK</b></td>
+            <td></td>
+            <td>Inter Stellar Kredits</td>
+            <td>EvE</td>
+            <td>
+              Monnaie de EVE. C'est également l'abréviation utilisée pour la
+              couronne Islandaise.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Jet</b></td>
+            <td></td>
+            <td>Jettisson</td>
+            <td>EvE</td>
+            <td>
+              Cargo d'environ 27.500 m3 créé lors de l'éjection
+              (<i>Jettisson</i>) de matériel dans l'espace.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Killpod</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>Détruire le POD d'un joueur.</td>
+          </tr>
+
+          <tr>
+            <td><b>KOS</b></td>
+            <td></td>
+            <td>Kill On Sight</td>
+            <td>MMOGs</td>
+            <td>Tuer/détruire à vue.</td>
+          </tr>
+
+          <tr>
+            <td><b>LAR</b></td>
+            <td></td>
+            <td>Large Armor Repairer</td>
+            <td>EvE</td>
+            <td>Module pour le <i>tank armor</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>lo / l o</b></td>
+            <td></td>
+            <td>Hello</td>
+            <td>MMOGs</td>
+            <td>Bonjour, Salut.</td>
+          </tr>
+
+          <tr>
+            <td><b>LOL</b></td>
+            <td></td>
+            <td>Laughing Out Loud</td>
+            <td>MMOGs</td>
+            <td>
+              Eclater de rire (voir <a href="http://izlin.free.fr/lol">ici</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>LVL</b></td>
+            <td></td>
+            <td>Level</td>
+            <td>MMOGs</td>
+            <td>Niveau.</td>
+          </tr>
+
+          <tr>
+            <td><b>Mack</b></td>
+            <td></td>
+            <td>Mackinaw</td>
+            <td>EvE</td>
+            <td>Barge tech 2 spécialisée dans le minage de glace.</td>
+          </tr>
+
+          <tr>
+            <td><b>MAPC</b></td>
+            <td></td>
+            <td>Micro Auxiliary Power Core</td>
+            <td>EvE</td>
+            <td>
+              Type de module qui boost le <i>Power Grid</i> au détriment du
+              CPU.<br />
+              Surtout utile pour les frégates
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>MAR</b></td>
+            <td></td>
+            <td>Medium Armor Repairer</td>
+            <td>EvE</td>
+            <td>Module pour le <i>tank armor</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>matar</b></td>
+            <td>matari</td>
+            <td>Minmatar</td>
+            <td>EvE</td>
+            <td>
+              Autre appellation (adjectifs de noms et lieux) d'une des cinq
+              races principales du jeu.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>MB</b></td>
+            <td></td>
+            <td>Mining Barge</td>
+            <td>EvE</td>
+            <td>
+              Type de vaisseaux spécialisés dans le minage. Regroupe également
+              les <i>Exhumers</i>, leurs versions Tech 2.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>MC</b></td>
+            <td></td>
+            <td>Mercenary Coalition</td>
+            <td>EvE</td>
+            <td>Alliance de joueurs.</td>
+          </tr>
+
+          <tr>
+            <td><b>ME</b></td>
+            <td></td>
+            <td>Mineral Efficiency</td>
+            <td>EvE</td>
+            <td>
+              Qualité d'un BP. Plus le ME est élevé, plus la fabrication se fera
+              sans gaspillage.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Mega</b></td>
+            <td></td>
+            <td>Megacyte</td>
+            <td>EvE</td>
+            <td>Type de minerais.</td>
+          </tr>
+
+          <tr>
+            <td><b>Mega</b></td>
+            <td></td>
+            <td>Megathron</td>
+            <td>EvE</td>
+            <td>BS Gallente.</td>
+          </tr>
+
+          <tr>
+            <td><b>Mexa</b></td>
+            <td></td>
+            <td>Mexallon</td>
+            <td>EvE</td>
+            <td>Type de minerais.</td>
+          </tr>
+
+          <tr>
+            <td><b>ML</b></td>
+            <td></td>
+            <td>Missiles Launchers</td>
+            <td>EvE</td>
+            <td>Type d'armement.</td>
+          </tr>
+
+          <tr>
+            <td><b>MS</b></td>
+            <td></td>
+            <td>Mother Ship</td>
+            <td>EvE</td>
+            <td>Classe de vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>MWD</b></td>
+            <td></td>
+            <td>MicroWarp Drive</td>
+            <td>EvE</td>
+            <td>Module de vitesse.</td>
+          </tr>
+
+          <tr>
+            <td><b>Nanites</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Composants qui permet de réparer un module endommagé à cause du
+              <i>Heat</i> (voir ce mot).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>NAP</b></td>
+            <td></td>
+            <td>Non Agression Pact</td>
+            <td>EvE</td>
+            <td>Pacte de non agression.</td>
+          </tr>
+
+          <tr>
+            <td><b>NBSI</b></td>
+            <td></td>
+            <td>Not Blue Shoot It</td>
+            <td>EvE</td>
+            <td>
+              Politique d'une alliance ou d'une corporation donnant comme
+              consigne à ses pilotes de détruire tout ce qui n'a pas un standing
+              positif (apparait en bleu dans l'overview avec les paramètres de
+              base).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Neut</b></td>
+            <td></td>
+            <td>Neutralizer</td>
+            <td>EvE</td>
+            <td>
+              Module offensif qui a pour effet de réduire le Capacitor de la
+              cible jusqu'à un minimum de 0.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Newbie</b></td>
+            <td>Rookie</td>
+            <td></td>
+            <td>MMOGs</td>
+            <td>Joueur débutant.</td>
+          </tr>
+
+          <tr>
+            <td><b>Noob</b></td>
+            <td>Newbie</td>
+            <td></td>
+            <td>MMOGs</td>
+            <td>
+              Joueur débutant. Parfois utilisé avec une condescendance
+              péjorative par des joueurs plus expérimentés.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Nos / Nosfe</b></td>
+            <td></td>
+            <td>Nospheratu</td>
+            <td>EvE</td>
+            <td>
+              Module offensif qui a pour effet d'absorber le Capacitor de la
+              cible. Le capa de la cible ne peut être descendu en au dessous de
+              celui de l'agresseur.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Nox</b></td>
+            <td></td>
+            <td>Nocxium</td>
+            <td>EvE</td>
+            <td>Type de minerais.</td>
+          </tr>
+
+          <tr>
+            <td><b>NP</b></td>
+            <td></td>
+            <td>No Problem</td>
+            <td>MMOGs</td>
+            <td>Aucun problème.</td>
+          </tr>
+
+          <tr>
+            <td><b>NPC</b></td>
+            <td>PNJ</td>
+            <td>Non Player Character</td>
+            <td>MMOGs</td>
+            <td>Personnage Non Joueur.</td>
+          </tr>
+
+          <tr>
+            <td><b>NRDS</b></td>
+            <td></td>
+            <td>Not Red Dont Shoot</td>
+            <td>EvE</td>
+            <td>
+              Politique d'une alliance ou d'une corporation donnant comme
+              consigne à ses pilotes de ne tirer que sur ce qui a un standing
+              négatif (apparait en rouge dans l'overview avec les paramètres de
+              base).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>NRJ</b></td>
+            <td>Capa</td>
+            <td></td>
+            <td>EvE</td>
+            <td>Energie, désigne le <i>Capacitor</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>OD</b></td>
+            <td></td>
+            <td>OverDrive</td>
+            <td>EvE</td>
+            <td>Module de vitesse.</td>
+          </tr>
+
+          <tr>
+            <td><b>OMG / OMFG</b></td>
+            <td></td>
+            <td>Oh My (Fucking) God</td>
+            <td>MMOGs</td>
+            <td>Ho mon dieu !</td>
+          </tr>
+
+          <tr>
+            <td><b>OMW</b></td>
+            <td>OTW</td>
+            <td>On My Way</td>
+            <td>Anglais</td>
+            <td>Je suis en route, j'arrive.</td>
+          </tr>
+
+          <tr>
+            <td><b>OOC</b></td>
+            <td>HRP</td>
+            <td>Out Of Character</td>
+            <td>MMOGs</td>
+            <td>
+              L'utilisateur signale qu'il parle en son nom propre et non celui
+              de son personnage/avatar.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>OTW</b></td>
+            <td>OMW</td>
+            <td>On The Way</td>
+            <td>Anglais</td>
+            <td>Je suis en route, j'arrive.</td>
+          </tr>
+
+          <tr>
+            <td><b>Outpost</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>Stations construite et gérée par des joueurs.</td>
+          </tr>
+
+          <tr>
+            <td><b>Own / Ownd</b></td>
+            <td></td>
+            <td>Owned</td>
+            <td>Anglais</td>
+            <td>
+              Etre humilié par un plaisantin ou un joueur plus fort. S'être fait
+              avoir.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>P&amp;P</b></td>
+            <td></td>
+            <td>People and Places</td>
+            <td>EvE</td>
+            <td>
+              Fenêtre de l'interface qui permet entre autre d'effectuer une
+              recherche dans le jeu, liste les BM ou la liste d'amis du joueur.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>PC</b></td>
+            <td></td>
+            <td>Price Check</td>
+            <td>MMOGs</td>
+            <td>
+              Demande de prix sur un module, un vaisseau ou toute autre
+              marchandise échangeable.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>PDS</b></td>
+            <td></td>
+            <td>Power Diagnostic System</td>
+            <td>EvE</td>
+            <td>
+              Module qui donne des bonus sur le <i>shield</i>, le
+              <i>capacitor</i> et le <i>power grid</i>.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>PDU</b></td>
+            <td>PDS</td>
+            <td>Power Diagnostic Unit</td>
+            <td>EvE</td>
+            <td>
+              Module qui donne des bonus sur le <i>shield</i>, le
+              <i>capacitor</i> et le <i>power grid</i>.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>PE</b></td>
+            <td></td>
+            <td>Production Efficiency</td>
+            <td>EvE</td>
+            <td>
+              Qualité d'un BP. Plus le PE est élevé, plus la fabrication se fera
+              rapidement.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>PG</b></td>
+            <td></td>
+            <td>Power Grid</td>
+            <td>EvE</td>
+            <td>Caractéristique d'un vaisseau.</td>
+          </tr>
+
+          <tr>
+            <td><b>Phoon</b></td>
+            <td></td>
+            <td>Typhoon</td>
+            <td>EvE</td>
+            <td>BS Minmatar.</td>
+          </tr>
+
+          <tr>
+            <td><b>PK</b></td>
+            <td></td>
+            <td>Player Killer</td>
+            <td>MMOGs</td>
+            <td>
+              Littéralement tueur de joueur, désigne un joueur qui en combat
+              d'autre. Voir aussi PvP.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Plagio</b></td>
+            <td></td>
+            <td>Plagioclase</td>
+            <td>EvE</td>
+            <td>Type de minerais.</td>
+          </tr>
+
+          <tr>
+            <td><b>Plate</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>Module pour le <i>tank armor</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>plex</b></td>
+            <td></td>
+            <td>Complex</td>
+            <td>EvE</td>
+            <td>
+              Zones non instancées (contrairement aux missions) équivalente à
+              des donjons.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>PLZ</b></td>
+            <td></td>
+            <td>Please</td>
+            <td>Anglais</td>
+            <td>SVP.</td>
+          </tr>
+
+          <tr>
+            <td><b>POD</b></td>
+            <td></td>
+            <td>Hydrostatic Capsule</td>
+            <td>EvE</td>
+            <td>
+              Littéralement Cosse. Le POD désigne la Capsule de survie d'un
+              pilote. Aussi appelé œuf de par sa forme.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Podder</b></td>
+            <td>POD</td>
+            <td>To Pod</td>
+            <td>Franglais</td>
+            <td>
+              Action de mettre son adversaire en POD (en général cela passe par
+              la destruction de son vaisseau).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Pop</b></td>
+            <td>Spawn</td>
+            <td></td>
+            <td>MMOGs</td>
+            <td>Point d'apparition ou apparition d'un NPC.</td>
+          </tr>
+
+          <tr>
+            <td><b>POS</b></td>
+            <td></td>
+            <td>Player Own Structure</td>
+            <td>EvE</td>
+            <td>Structure gérée par des joueurs.</td>
+          </tr>
+
+          <tr>
+            <td><b>Prober</b></td>
+            <td></td>
+            <td>To probe</td>
+            <td>Franglais</td>
+            <td>
+              Sonde ou action d'utiliser des sondes qui permettent de détecter
+              vaisseaux, complexes et autre trucs cachés.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Projo</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>Armes de type Projectile.</td>
+          </tr>
+
+          <tr>
+            <td><b>Proof or STFU</b></td>
+            <td></td>
+            <td>Proof or Shut The Fuck Up</td>
+            <td>Anglais</td>
+            <td>
+              En moins grossier cela signifie : "Prouve le ou ferme là".<br />
+              Parfois répliqué à quelqu'un qui lance des afirmations
+              tendancieuses sans argumentation.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>PVE</b></td>
+            <td></td>
+            <td>Player Versus Environment</td>
+            <td>MMOGs</td>
+            <td>
+              Jouer contre l'environnement généré par le serveur. Se dit par
+              opposition au PVP quand on ne joue pas contre d'autre joueurs.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>PVP</b></td>
+            <td></td>
+            <td>Player versus Player</td>
+            <td>MMOGs</td>
+            <td>Joueur contre joueur en duel ou en groupes.</td>
+          </tr>
+
+          <tr>
+            <td><b>pwn / pwnd</b></td>
+            <td>Own / Ownd</td>
+            <td>Owned</td>
+            <td>Anglais</td>
+            <td>
+              voir <i>own</i>. Le P résultant d'une faute de frappe mais à fini
+              par passer dans les mœurs (et oui).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Pyro</b></td>
+            <td></td>
+            <td>Pyroxeres</td>
+            <td>EvE</td>
+            <td>Type de minerais.</td>
+          </tr>
+
+          <tr>
+            <td><b>R&amp;D</b></td>
+            <td></td>
+            <td>Research and Development</td>
+            <td>EvE</td>
+            <td>
+              Agents qui font parti d'une des corporations NPC scientifiques.
+              Ces agents permettent d'obtenir des <i>Datacore</i> indispensable
+              pour l'invention
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>RA</b></td>
+            <td></td>
+            <td>Red Alliance</td>
+            <td>EvE</td>
+            <td>Alliance de joueurs.</td>
+          </tr>
+
+          <tr>
+            <td><b>Rats</b></td>
+            <td></td>
+            <td>Pirats</td>
+            <td>EvE</td>
+            <td>
+              Littéralement Rat (le rongeur), dans Eve, désigne les NPCs des
+              factions pirates que l'ont trouve en missions ou dans les
+              <i>belts</i>.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Rax</b></td>
+            <td>T-Rax</td>
+            <td>Thorax</td>
+            <td>EvE</td>
+            <td>Croiseur Gallente.</td>
+          </tr>
+
+          <tr>
+            <td><b>RCU</b></td>
+            <td></td>
+            <td>Reactor Control Unit</td>
+            <td>EvE</td>
+            <td>Module qui donne un bonus sur le <i>power grid</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>RDY</b></td>
+            <td></td>
+            <td>Ready</td>
+            <td>Anglais</td>
+            <td>Je suis prêt.</td>
+          </tr>
+
+          <tr>
+            <td><b>RE</b></td>
+            <td></td>
+            <td>Reffining Efficicency</td>
+            <td>EvE</td>
+            <td>
+              Littéralement l'efficacité au raffinage. Désigne la capacité d'un
+              joueur à raffiner, minerais, glace et autre objets plus ou moins
+              efficacement. En général donné en pourcentage ou <i>Perfect</i> en
+              cas d'un raffinage sans perte.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Reco</b></td>
+            <td>Relog</td>
+            <td></td>
+            <td>Franglais</td>
+            <td>Se reconnecter au serveur.</td>
+          </tr>
+
+          <tr>
+            <td><b>Relog</b></td>
+            <td>Reco</td>
+            <td></td>
+            <td>Franglais</td>
+            <td>Se reconnecter au serveur.</td>
+          </tr>
+
+          <tr>
+            <td><b>RGR</b></td>
+            <td></td>
+            <td>Roger</td>
+            <td>Militaire</td>
+            <td>
+              Equivalent de "Bien reçu" ou "5 sur 5" à la réception d'un ordre.
+            </td>
+          </tr>
+          <tr>
+            <td><b>Rig</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Modules spéciaux qui apportent une modification définitive à un
+              vaisseau. Ils ne peuvent être retirés sans les détruire.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <b>RKZ<br /> </b>
+            </td>
+            <td>Bob</td>
+            <td>KenZoku<br /></td>
+            <td>EvE<br /></td>
+            <td>
+              Abréviation de l'alliance connue par le passé sous le nom de
+              Bob.<br />
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>RNI</b></td>
+            <td>CNR</td>
+            <td>Raven Navy Issue</td>
+            <td>EvE</td>
+            <td>
+              BS de faction Caldari (Très peut utilisée face à son ancienne
+              version CNR).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Roaming</b></td>
+            <td></td>
+            <td>To Roam</td>
+            <td>Anglais</td>
+            <td>
+              Errer. Petit groupe de vaisseaux rapides Tech 1 ou Tech 2
+              (Frégates, Destroyers ou Croiseurs maximum) en déplacement à la
+              recherche de cibles sur un territoire donné.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>ROF</b></td>
+            <td>CDT</td>
+            <td>Rate Of Fire</td>
+            <td>Militaire</td>
+            <td>Cadence De Tir.</td>
+          </tr>
+
+          <tr>
+            <td><b>ROFL</b></td>
+            <td></td>
+            <td>Roll On the Floor Laughing</td>
+            <td>MMOGs</td>
+            <td>
+              Rigoler mais alors vraiment beaucoup beaucoup (voir
+              <a href="http://izlin.free.fr/lol">ici</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>ROFLMAO</b></td>
+            <td></td>
+            <td>
+              Roll On the Floor Laughing<br />
+              My Ass Off
+            </td>
+            <td>MMOGs</td>
+            <td>
+              Rigoler encore plus (voir
+              <a href="http://izlin.free.fr/lol">ici</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Roids</b></td>
+            <td></td>
+            <td>Asteroids</td>
+            <td>EvE</td>
+            <td>
+              Astéroïdes, Cailloux à miner dans une <i>belt</i> pour récupérer
+              des minéraux.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Rookie</b></td>
+            <td>Newbie</td>
+            <td></td>
+            <td>EvE</td>
+            <td>Joueur débutant.</td>
+          </tr>
+
+          <tr>
+            <td><b>RP</b></td>
+            <td></td>
+            <td>Research Point</td>
+            <td>EvE</td>
+            <td>Points obtenus grâce à un agents R&amp;D.</td>
+          </tr>
+
+          <tr>
+            <td><b>RP</b></td>
+            <td></td>
+            <td>RolePlay</td>
+            <td>MMOGs</td>
+            <td>
+              Se dit d'un joueur qui joue et parle comme le ferait son
+              personnage en fonction de la personnalité de ce dernier.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>RSF</b></td>
+            <td></td>
+            <td>Red Swarm Federation</td>
+            <td>EvE</td>
+            <td>
+              Meta alliance regroupant plusieurs alliances de joueurs dont les
+              principales sont Red Alliance, Goon Swarm et Tau Ceti
+              Federation.<br />
+              Ancienne appellation : Ragoon
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>RTFAQ</b></td>
+            <td></td>
+            <td>Read The Fucking FAQ</td>
+            <td>Anglais</td>
+            <td>
+              Terme grossier invitant le destinataire du message à lire le FAQ.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>RTFM</b></td>
+            <td></td>
+            <td>Read The Fucking Manual</td>
+            <td>Anglais</td>
+            <td>
+              Terme grossier invitant le destinataire du message à lire le
+              manuel.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>SAR</b></td>
+            <td></td>
+            <td>Small Armor Repairer</td>
+            <td>EvE</td>
+            <td>Module pour le <i>tank armor</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>SB</b></td>
+            <td></td>
+            <td>SmartBomb</td>
+            <td>EvE</td>
+            <td>Type d'armement à effet de zone.</td>
+          </tr>
+
+          <tr>
+            <td><b>SB</b></td>
+            <td></td>
+            <td>Shield Booster</td>
+            <td>EvE</td>
+            <td>Module pour le <i>tank Shield</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>Scorp</b></td>
+            <td></td>
+            <td>Scorpion</td>
+            <td>EvE</td>
+            <td>BS Caldari.</td>
+          </tr>
+
+          <tr>
+            <td><b>Scrambler</b></td>
+            <td></td>
+            <td></td>
+            <td>Franglais</td>
+            <td>
+              Action d'utiliser un modules qui permet d'empêcher une cible de
+              <i>warper</i>.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Serp</b></td>
+            <td></td>
+            <td>Serpentis Pirates</td>
+            <td>EvE</td>
+            <td>Faction NPC Pirate.</td>
+          </tr>
+
+          <tr>
+            <td><b>Sese</b></td>
+            <td></td>
+            <td>Serenity</td>
+            <td>EvE</td>
+            <td>Serveur localisé en Chine.</td>
+          </tr>
+
+          <tr>
+            <td><b>Sink</b></td>
+            <td></td>
+            <td>Heat Sink</td>
+            <td>EvE</td>
+            <td>
+              Module qui a pour effet d'augmenter l'efficacité des armes à
+              énergie (lasers).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Sisi</b></td>
+            <td></td>
+            <td>Singularity</td>
+            <td>EvE</td>
+            <td>Serveur de test.</td>
+          </tr>
+
+          <tr>
+            <td><b>SL</b></td>
+            <td></td>
+            <td>Security Level</td>
+            <td>EvE</td>
+            <td>
+              Niveau de sécurité d’un système (<a
+                href="http://forums.jeuxonline.info/showpost.php?p=15509728&amp;postcount=99">détails</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Slot</b></td>
+            <td></td>
+            <td></td>
+            <td>Anglais</td>
+            <td>
+              Emplacements (<i>High, medium, low</i> ou <i>rig</i>) qui
+              permettent l'installations de modules sur un vaisseau. (<a
+                href="http://forums.jeuxonline.info/showpost.php?p=10406543&amp;postcount=26">détails</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <b>Soon<sup>tm</sup></b>
+            </td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Expression de la communautée Evienne à propos de projets, patch ou
+              autre dont on a pas la moindre idée de la date de sortie. C'est à
+              l'origine une manière de botter en touche par CCP quand ils ne
+              pouvaient/voulaient annoncer aucun délais.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>SP</b></td>
+            <td></td>
+            <td>Skill Points</td>
+            <td>EvE</td>
+            <td>Points de compétences.</td>
+          </tr>
+
+          <tr>
+            <td><b>Spawn</b></td>
+            <td>Pop</td>
+            <td></td>
+            <td>MMOGs</td>
+            <td>Point d'apparition ou apparition d'un NPC.</td>
+          </tr>
+
+          <tr>
+            <td><b>SRY</b></td>
+            <td></td>
+            <td>Sorry</td>
+            <td>Anglais</td>
+            <td>Désolé.</td>
+          </tr>
+
+          <tr>
+            <td><b>SS</b></td>
+            <td></td>
+            <td>Security Statut</td>
+            <td>EvE</td>
+            <td>
+              Réputation d'un joueurs vis à vis de CONCORD, la police NPC du Jeu
+              (<a href="http://forums.jeuxonline.info/showpost.php?p=15509728&amp;postcount=99">détails</a>).
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>STAR</b></td>
+            <td></td>
+            <td>Support Team And Resources</td>
+            <td>EvE</td>
+            <td>Section d'aide aux joueurs de l'ISD.</td>
+          </tr>
+
+          <tr>
+            <td><b>STFU</b></td>
+            <td></td>
+            <td>Shut The Fuck Up</td>
+            <td>Anglais</td>
+            <td>Terme grossier signifiant "ferme la".</td>
+          </tr>
+
+          <tr>
+            <td><b>Strip</b></td>
+            <td></td>
+            <td>Strip Mining Laser</td>
+            <td>EvE</td>
+            <td>Laser de minage exclusif aux Barges.</td>
+          </tr>
+
+          <tr>
+            <td><b>Stuck (être)</b></td>
+            <td></td>
+            <td>To be stuck</td>
+            <td>EvE</td>
+            <td>
+              Etre coincé par un élément graphique du jeu.<br />
+              Le plus souvent une station et dont il est impossible de se sortir
+              même en se déconnectant.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>T2</b></td>
+            <td>Tech 2</td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Désigne une catégorie de modules ou vaisseaux améliorés de seconde
+              génération.<br />
+              Ne pas confondre avec Tiers 2.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Tackler</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Catégorie de vaisseau (ou de pilote) dont le rôle est
+              d'immobiliser une cible sur le champs de bataille.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Tag</b></td>
+            <td>Ticker</td>
+            <td></td>
+            <td>EvE</td>
+            <td>Abréviation du nom d'une corporation ou d'une alliance.</td>
+          </tr>
+
+          <tr>
+            <td><b>TBH</b></td>
+            <td></td>
+            <td>To Be Honnest</td>
+            <td>Anglais</td>
+            <td>Pour être honnête.</td>
+          </tr>
+
+          <tr>
+            <td><b>TCF</b></td>
+            <td></td>
+            <td>Tau Ceti Federation</td>
+            <td>EvE</td>
+            <td>Alliance de joueurs (Francophones pour la plupart).</td>
+          </tr>
+
+          <tr>
+            <td><b>Tech 2</b></td>
+            <td>T2</td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              Désigne une catégorie de modules ou vaisseaux améliorés de seconde
+              génération.<br />
+              Ne pas confondre avec Tiers 2.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>thx</b></td>
+            <td>TY</td>
+            <td>Thank you</td>
+            <td>Anglais</td>
+            <td>Merci.</td>
+          </tr>
+
+          <tr>
+            <td><b>Tiers</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>
+              En général suivi d'un chiffre désigne une classification au sein
+              d'une même classe de vaisseaux en fonction de leur coût de
+              fabrications et parfois de <i>skills</i> requise pour le
+              piloter.<br />
+              Un Tiers 1 a toujours un coût inférieur à un Tiers 2 etc.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Torp</b></td>
+            <td></td>
+            <td>Torpedo</td>
+            <td>EvE</td>
+            <td>Torpille.</td>
+          </tr>
+
+          <tr>
+            <td><b>TQ</b></td>
+            <td></td>
+            <td>Tranquility</td>
+            <td>EvE</td>
+            <td>Server unique du jeu Eve Online. Voir aussi Sese et Sisi.</td>
+          </tr>
+
+          <tr>
+            <td><b>T-Rax</b></td>
+            <td>Rax</td>
+            <td>Thorax</td>
+            <td>EvE</td>
+            <td>
+              Croiseur Gallente. Fait référence au T-Rex, le dinosaure car à la
+              sortie d'Eve, c'était l'un des vaisseaux les plus puissant
+              existant.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Trit</b></td>
+            <td></td>
+            <td>Tritanium</td>
+            <td>EvE</td>
+            <td>Type de minerais.</td>
+          </tr>
+
+          <tr>
+            <td><b>TS</b></td>
+            <td></td>
+            <td>Team Speak</td>
+            <td>MMOGs</td>
+            <td>
+              Logiciel permettant à plusieurs joueurs de communiquer par la
+              voix.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>TY</b></td>
+            <td>THX</td>
+            <td>Thank You</td>
+            <td>Anglais</td>
+            <td>Merci.</td>
+          </tr>
+
+          <tr>
+            <td><b>Undock</b></td>
+            <td>Dédock</td>
+            <td>Dock out</td>
+            <td>Anglais</td>
+            <td>Sortir d'une station.</td>
+          </tr>
+
+          <tr>
+            <td><b>UTC</b></td>
+            <td></td>
+            <td>
+              Compromis entre l'anglais<br />
+              CUT et le français TUC
+            </td>
+            <td>Internationnal</td>
+            <td>
+              link
+              <a href="http://fr.wikipedia.org/wiki/Temps_universel_coordonn%C3%A9">Wikipédia</a>.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>Veld</b></td>
+            <td></td>
+            <td>Veldspare</td>
+            <td>EvE</td>
+            <td>Type de minerais.</td>
+          </tr>
+
+          <tr>
+            <td><b>Vindic</b></td>
+            <td></td>
+            <td>Vindicator</td>
+            <td>EvE</td>
+            <td>BS de faction pirate Serpentis.</td>
+          </tr>
+
+          <tr>
+            <td><b>Vso</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>Vaisseau au singulier.</td>
+          </tr>
+
+          <tr>
+            <td><b>Vsx</b></td>
+            <td></td>
+            <td></td>
+            <td>EvE</td>
+            <td>Vaisseaux au pluriel.</td>
+          </tr>
+
+          <tr>
+            <td><b>Wardec</b></td>
+            <td></td>
+            <td>War declaration</td>
+            <td>EvE</td>
+            <td>Déclaration de guerre.</td>
+          </tr>
+
+          <tr>
+            <td><b>WB</b></td>
+            <td></td>
+            <td>Welcome Back</td>
+            <td>MMOGs</td>
+            <td>Littéralement bon retour.</td>
+          </tr>
+
+          <tr>
+            <td><b>WCS</b></td>
+            <td></td>
+            <td>Warp Core Stabilizer</td>
+            <td>EvE</td>
+            <td>Module qui permet de contrer les module de <i>scramble</i>.</td>
+          </tr>
+
+          <tr>
+            <td><b>Web</b></td>
+            <td></td>
+            <td>Stasis Webifier</td>
+            <td>EvE</td>
+            <td>Module permettant de ralentir la cible.</td>
+          </tr>
+
+          <tr>
+            <td><b>Weber</b></td>
+            <td></td>
+            <td>To Web</td>
+            <td>Franglais</td>
+            <td>
+              Action de ralentir sa cible avec un module de <i>Web</i>. Rôle
+              souvent destinés aux <i>tacklers</i>.
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>WTB</b></td>
+            <td></td>
+            <td>Want To Buy</td>
+            <td>MMOGs</td>
+            <td>Je veux acheter.</td>
+          </tr>
+
+          <tr>
+            <td><b>WTF</b></td>
+            <td></td>
+            <td>
+              What The Fuck ou<br />
+              Want To Fight
+            </td>
+            <td>MMOGs</td>
+            <td>
+              C’est quoi ce bordel ? ou<br />
+              Tu veux te battre ?
+            </td>
+          </tr>
+
+          <tr>
+            <td><b>WTS</b></td>
+            <td></td>
+            <td>Want To Sell</td>
+            <td>MMOGs</td>
+            <td>Je veux Vendre.</td>
+          </tr>
+
+          <tr>
+            <td><b>WTT</b></td>
+            <td></td>
+            <td>Want To Trade</td>
+            <td>MMOGs</td>
+            <td>Je veux échanger.</td>
+          </tr>
+
+          <tr>
+            <td><b>Zyd</b></td>
+            <td></td>
+            <td>Zydrine</td>
+            <td>EvE</td>
+            <td>Type de minerais.</td>
+          </tr>
+
+          <tr class="no-result">
+            <td colspan="5">La recherche n'a donné aucun résultat.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+
+      <br />
+    </div>
+
+    <script>
+      var searchInput = document.getElementById("search");
+
+      searchInput.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+          searchTable();
+        }
+      });
+
+      function searchTable() {
+        // Récupérer les éléments nécessaires du DOM
+        var input = document.getElementById("search");
+        var filter = input.value.toUpperCase();
+        var table = document.querySelector(".ari_blan");
+        var tr = table.getElementsByTagName("tr");
+        var noResultRow = document.querySelector(".no-result");
+
+        // Variable pour suivre si des résultats ont été trouvés
+        var hasResults = false;
+
+        // Parcourir les lignes du tableau, en commençant par l'index 1 pour sauter la première ligne
+        for (var i = 1; i < tr.length; i++) {
+          var currentRow = tr[i];
+          var cells = currentRow.getElementsByTagName("td");
+
+          // Variable pour suivre si une correspondance a été trouvée dans la ligne
+          var rowMatch = false;
+
+          // Parcourir toutes les cellules de la ligne
+          for (var j = 0; j < cells.length; j++) {
+            var cell = cells[j];
+            var txtValue = cell.textContent || cell.innerText;
+
+            // Vérifier si le texte de la cellule contient le filtre de recherche
+            var index = txtValue.toUpperCase().indexOf(filter);
+            if (index > -1) {
+              // Marquer la ligne comme correspondante
+              rowMatch = true;
+
+              // Créer une nouvelle chaîne avec le mot-clé surligné
+              var highlightedText =
+                txtValue.substring(0, index) +
+                '<span class="highlight">' +
+                txtValue.substring(index, index + filter.length) +
+                "</span>" +
+                txtValue.substring(index + filter.length);
+
+              // Mettre à jour le contenu de la cellule avec le mot-clé surligné
+              cell.innerHTML = highlightedText;
+            } else {
+              // Rétablir le contenu d'origine de la cellule si aucune correspondance n'est trouvée
+              cell.innerHTML = txtValue;
+            }
+          }
+
+          // Afficher ou masquer la ligne en fonction des résultats de la recherche dans la ligne
+          currentRow.style.display = rowMatch ? "" : "none";
+
+          // Mettre à jour la variable globale hasResults
+          hasResults = hasResults || rowMatch;
+        }
+
+        // Afficher/masquer la ligne "No Result" en fonction des résultats de la recherche
+        noResultRow.style.display = hasResults ? "none" : "table-row";
+      }
+
+      // Fonction pour changer de thème
+      function toggleTheme() {
+        const body = document.body;
+        body.classList.add('no-transition'); // Ajoute la classe temporaire
+
+        // Force le repaint en accédant à une propriété de style
+        body.offsetHeight;
+
+        body.classList.toggle('dark-theme');
+        body.classList.toggle('light-theme');
+
+        // Supprime la classe temporaire après le changement de classe
+        body.addEventListener('transitionend', () => {
+          body.classList.remove('no-transition');
+        }, { once: true });
+      }
+
+    </script>
+  </body>
+</html>
